@@ -54,15 +54,16 @@ main{
     .box-info{
         width: 90%;
         padding: 24px;
+        gap: 12px;
     }
 
     
     .box-info h2{
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     .box-info .info span{
-        font-size: 1.4rem;
+        font-size: 1.05rem;
     }
 
 }
