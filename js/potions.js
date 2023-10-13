@@ -1,14 +1,23 @@
 'use strict'
 
 const searchBar = document.getElementById('input')
-let potions = []
+let potions
 
 const getPotion = async () => {
     
     try{
-        let url = 'https://api.potterdb.com/v1/potions'
-        const response = await fetch(url)
-        potions = await response.json()
+        let url1 = 'https://api.potterdb.com/v1/potions?page[number]=1'
+        const response1 = await fetch(url1)
+        potions = await response1.json()
+
+        let url2 = 'https://api.potterdb.com/v1/potions?page[number]=2'
+        const response2 = await fetch(url2)
+        let page2 = await response2.json()
+        page2.data.forEach(potion => {
+            potions.data.push(potion)
+        });
+
+        console.log(potions)
         createPotionCard(potions.data)
     } catch (err) {
         console.error(err)

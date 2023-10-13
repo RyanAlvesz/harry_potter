@@ -1,14 +1,36 @@
 'use strict'
 
 const searchBar = document.getElementById('input')
-let spells = []
+let spells
 
 const getSpell = async () => {
     
     try{
-        let url = 'https://api.potterdb.com/v1/spells'
+        let url = 'https://api.potterdb.com/v1/spells?page[number]=1'
         const response = await fetch(url)
         spells = await response.json()
+
+        let url2 = 'https://api.potterdb.com/v1/spells?page[number]=2'
+        const response2 = await fetch(url2)
+        let page2 = await response2.json()
+        page2.data.forEach(spell => {
+            spells.data.push(spell)
+        });
+
+        let url3 = 'https://api.potterdb.com/v1/spells?page[number]=3'
+        const response3 = await fetch(url3)
+        let page3 = await response3.json()
+        page3.data.forEach(spell => {
+            spells.data.push(spell)
+        });
+
+        let url4 = 'https://api.potterdb.com/v1/spells?page[number]=4'
+        const response4 = await fetch(url4)
+        let page4 = await response4.json()
+        page4.data.forEach(spell => {
+            spells.data.push(spell)
+        });
+
         createSpellCard(spells.data)
     } catch (err) {
         console.error(err)
@@ -52,7 +74,8 @@ searchBar.addEventListener('keyup', (e) => {
     const filteredSpells = spells.data.filter((spell) => {
         return (
             spell.attributes.name.toLowerCase().includes(search) ||
-            spell.attributes.slug.toLowerCase().includes(search)
+            spell.attributes.slug.toLowerCase().includes(search) ||
+            spell.attributes.incantation?.toLowerCase().includes(search) 
         );
     });
 

@@ -23,9 +23,13 @@ const createSpellCard = (spell) => {
     
     document.getElementsByTagName("title")[0].innerText = spell.attributes.name
 
+    const nameLink = document.createElement('a')
+    nameLink.href = spell.attributes.wiki
+    nameLink.classList.add('title')
+
     const name = document.createElement('h2')
-    name.classList.add('title')
     name.textContent = spell.attributes.name
+
 
     const info = document.createElement('div')
     info.classList.add('info')
@@ -60,7 +64,8 @@ const createSpellCard = (spell) => {
         info.appendChild(creator)
     }
             
-    boxInfo.replaceChildren(name, info)
+    nameLink.appendChild(name)
+    boxInfo.replaceChildren(nameLink, info)
     
 }
 
