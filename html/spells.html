@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/search-bar.css">
+    <link rel="stylesheet" href="../css/options-section.css">
+    <link rel="stylesheet" href="../css/spell-potions-options.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/house-flag.js" defer></script>
+    <script src="../js/house-theme.js" defer></script>
+    <script src="../js/spells.js" defer></script>
+    <script src="../js/menu-header.js" defer></script>
+    <title>Spells</title>
+</head>
+<body>
+    <header>
+        <a href="./main-page.html" class="logo">
+            <img src="../img/logo-deathly-hallows.png" alt="Triângulo com um círculo no meio e uma reta na vertical">
+        </a>
+        <ul class="menu">
+            <li><a class="menuItem" href="./main-page.html">
+                <span>Home</span>
+            </a></li>
+            <li><a class="menuItem" href="../html/potions.html">
+                <span>Potions</span>
+            </a></li>
+            <li><a class="menuItem" href="../html/characters.html">
+                <span>Characters</span>
+            </a></li>
+            <li><a class="menuItem" href="#">
+                <span>Spells</span>
+            </a></li>
+        </ul>
+        <button class="hamburger">
+        <i class="menuIcon"><img src="../img/menu.svg" alt="3 barras horizontais"></i>
+        <i class="closeIcon"><img src="../img/close-menu.svg" alt="Um 'X'"></i>
+        </button>
+        <div class="right-container">
+            <div class="header-options">
+                <a href="./potions.html">
+                    <span>Potions</span>
+                </a>
+                <a href="./characters.html">
+                    <span>Characters</span>
+                </a>
+                <a href="#">
+                    <span>Spells</span>
+                </a>
+            </div>
+            <a href="../index.html" class="coat-of-arms">
+                <img src="../img/houses/hogwarts-flag.png" id="coat-of-arms">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="title-input">
+            <h2> Spells </h2>
+            <div class="input" id="input-box">
+                <input type="search" placeholder="Search for a spell..." id="input">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" style="stroke:var(--main-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                </svg>
+            </div>
+        </div>
+        <div class="options-section">
+            <div class="options-container" id="options-container">
+                <div class="loading">
+                    <img src="../img/gif-hp.gif" alt="Pomo de ouro">
+                    <span> Loading... </span>
+                </div>
+                <!-- Itens inseridos através da API -->
+            </div>
+        </div>
+    </main>
+</body>

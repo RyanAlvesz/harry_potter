@@ -1,0 +1,294 @@
+body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 100px 45px 100px;
+    height: 100%;
+}
+
+main::after{
+    content: '';
+    height: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, var(--opacity-gradient));
+    pointer-events: none;
+    z-index: -1;
+}
+
+.title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.title img{
+    width: 23rem;
+    position: relative;
+    z-index: 1;
+}
+
+.title img:nth-child(2){
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    right: 0;
+    left: 5px;
+    z-index: 0;
+    filter: blur(2px);
+}
+
+.main-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-options button{
+    height: 100%;
+    width: 100%;
+    transition-duration: 1s;
+}
+
+
+.main-options button a{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    background: linear-gradient(180deg, var(--main-gradient));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+}
+
+.main-options button a span{
+    font-size: 1.5rem;
+    color: var(--white);
+    font-family: var(--text-font);
+    text-shadow: 5px 5px 10px black;
+}
+
+button span{
+    padding-top: 24px;
+    z-index: 2;
+}
+
+.main-options button a img{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 84%;
+    z-index: 2;
+}
+
+.main-options button a img[alt*=frascos]{
+    left: -12%;
+    height: 80%;
+}
+
+.main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz]{
+    height: 80%;
+} 
+
+.main-options button a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 24px;
+    z-index: 1;
+    opacity: 0;
+    transition: 2s;
+    background: linear-gradient(360deg, var(--main-gradient));
+}
+
+.main-options button a:hover::after{
+    opacity: 100%;
+}
+
+.main-options a:hover{
+    transform: scale(1.03);
+}
+
+@media (min-width: 1500px){
+    .main-options button a img[alt*=frascos]{
+        left: 0;
+    }
+    .main-options button a img{
+        height: 80%;
+    }
+}
+
+@media (max-width: 1350px){
+    .main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz] {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1300px){
+    .main-options button a img[alt*=frascos]{
+        left: 0px;
+        height: 72%;
+    }
+    .main-options button a img{
+        height: 72%;
+    }
+    .main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz] {
+        height: 72%;
+    }
+
+    .main-options{
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1250px){
+    .main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz] {
+        height: 70%;
+        width: 80%;
+    }
+    
+    .main-options{
+        gap: 35px;
+    }
+}
+
+@media (max-width: 1200px){
+    .main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz] {
+        height: 68%;
+    }
+    .main-options button a img[alt*=frascos]{
+        left: -30px;
+        height: 68%;
+    }
+    .main-options button a img{
+        height: 70%;
+    }
+}
+
+@media (max-width: 1100px){
+    .main-options button a img[alt*=frascos]{
+        left: -55px;
+        height: 68%;
+    }
+}
+
+@media (max-width: 992px){
+
+    main{
+        padding: 0px 50px;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .main-options{
+        display: grid;
+        grid-template-rows: 1fr;
+        width: 80vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: auto;
+        border-radius: 12px;
+        gap: 55px;
+    }
+
+    .title img {
+        width: 50vw;
+    }
+
+    .main-options button a{
+        position: relative;
+        height: 60vh;
+        width: 80vw;
+        border-radius: 24px;
+        background: linear-gradient(180deg, var(--main-gradient));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-options button:nth-child(2) {
+        order: -1;
+    }
+
+    .main-options button a img[alt*=frascos]{
+        left: 0%;
+        height: 80%;
+    }
+
+    .main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz] {
+        width: auto;
+        height: 80%;
+    }
+
+    .main-options button a img{
+        height: 80%;
+    }
+
+
+    .main-options a:hover{
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .main-options button:nth-child(2) a{
+        overflow: hidden;
+    }
+    
+    .main-options button a img[alt*=frascos]{
+        left: -3%;
+        height: 76%;
+    }
+
+    main{
+        padding-inline: 12px;
+    }
+
+    .title img {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .main-options button a img[alt*=frascos]{
+        left: -12%;
+        height: 74%;
+    }
+    .main-options button a img[alt*=amarelas], .main-options button a img[alt*=cicatriz] {
+        width: auto;
+        height: 72%;
+    }
+
+    main{
+        padding-inline: 12px;
+    }
+
+    .title img {
+        width: 70vw;
+    }
+}

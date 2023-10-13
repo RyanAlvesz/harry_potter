@@ -1,0 +1,119 @@
+.gryffindor-background {
+    background: linear-gradient(90deg, var(--gryffindor-gradient));
+}
+
+.slytherin-background {
+    background: linear-gradient(90deg, var(--slytherin-gradient));
+}
+
+.ravenclaw-background {
+    background: linear-gradient(90deg, var(--ravenclaw-gradient));
+}
+
+.hufflepuff-background {
+    background: linear-gradient(90deg, var(--hufflepuff-gradient));
+}
+
+.default-background {
+    background: linear-gradient(90deg, var(--default-dark-gradient));
+}
+
+.gryffindor-main-border {
+    border: 2px solid var(--gryffindor-main-color);
+}
+
+.slytherin-main-border {
+    border: 2px solid var(--slytherin-main-color);
+}
+
+.ravenclaw-main-border {
+    border: 2px solid var(--ravenclaw-main-color);
+}
+
+.hufflepuff-main-border {
+    border: 2px solid var(--hufflepuff-main-color);
+}
+
+.default-main-border {
+    border: 2px solid var(--pearl);
+}
+
+.gryffindor-shadow {
+    box-shadow: var(--gryffindor-main-color) 5px 5px;
+}
+
+.slytherin-shadow {
+    box-shadow: var(--slytherin-main-color) 5px 5px;
+}
+
+.ravenclaw-shadow {
+    box-shadow: var(--ravenclaw-main-color) 5px 5px;
+}
+
+.hufflepuff-shadow {
+    box-shadow: var(--hufflepuff-main-color) 5px 5px;
+}
+
+.default-shadow {
+    box-shadow: var(--pearl) 5px 5px;
+}
+
+.gryffindor-color {
+    color: var(--gryffindor-second-color);
+}
+
+.slytherin-color {
+    color: var(--slytherin-second-color);
+}
+
+.ravenclaw-color {
+    color: var(--ravenclaw-second-color);
+}
+
+.hufflepuff-color {
+    color: var(--hufflepuff-second-color);
+}
+
+.default-color {
+    color: var(--pearl);
+}
+
+.gryffindor-second-border {
+    border: 2px solid var(--gryffindor-second-color);
+}
+
+.slytherin-second-border {
+    border: 2px solid var(--slytherin-second-color);
+}
+
+.ravenclaw-second-border {
+    border: 2px solid var(--ravenclaw-second-color);
+}
+
+.hufflepuff-second-border {
+    border: 2px solid var(--hufflepuff-second-color);
+}
+
+.default-second-border {
+    border: 2px solid var(--pearl);
+}
+
+.character-box.gryffindor-background::after {
+    background: linear-gradient(260deg, var(--gryffindor-gradient));
+}
+
+.character-box.slytherin-background::after {
+    background: linear-gradient(260deg, var(--slytherin-gradient));
+}
+
+.character-box.ravenclaw-background::after {
+    background: linear-gradient(260deg, var(--ravenclaw-gradient));
+}
+
+.character-box.hufflepuff-background::after {
+    background: linear-gradient(260deg, var(--hufflepuff-gradient));
+}
+
+.character-box.default-background::after {
+    background: linear-gradient(260deg, var(--default-dark-gradient));
+}

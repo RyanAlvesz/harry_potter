@@ -1,0 +1,49 @@
+.loading{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 5rem;
+}
+
+.loading img{
+    height: 200px;
+}
+
+.loading span{
+    font-family: var(--text-font);
+    font-size: 1.8rem;
+    color: var(--pearl);
+    font-family: var(--text-font);
+    text-shadow: 3px 3px var(--main-color);
+}
+
+@media (max-width: 600px) {
+
+    .loading img{
+        height: 150px;
+    }
+
+    .loading span{
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .loading img{
+        height: 130px;
+    }
+
+    .loading span{
+        font-size: 1.3rem;
+    }
+
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/box-information.css">
+    <link rel="icon" href="./img/favicon.png">
+    <script src="./js/house-theme.js" defer></script>
+    <title>House Selection</title>
+</head>
+<body>
+    <main>
+        <div class="box-information">
+            <h2>Select your house</h2>
+            <div class="buttons">
+                <a href="./html/main-page.html">
+                    <button id="gryffindor-button" onclick="setHouse(this.id)">
+                        <img src="./img/houses/gryffindor-badge.png" alt="Brasão com um leão em uma fundo vermelho">
+                    </button>
+                </a>
+                <a href="./html/main-page.html">
+                    <button id="slytherin-button" onclick="setHouse(this.id)">
+                        <img src="./img/houses/slytherin-badge.png" alt="Brasão com uma cobra em um fundo verde">
+                    </button>
+                </a>
+                <a href="./html/main-page.html">
+                    <button id="ravenclaw-button" onclick="setHouse(this.id)">
+                        <img src="./img/houses/ravenclaw-badge.png" alt="Brasão com uma águia em um fundo azul">
+                    </button>
+                </a>
+                <a href="./html/main-page.html">
+                    <button id="hufflepuff-button" onclick="setHouse(this.id)">
+                        <img src="./img/houses/hufflepuff-badge.png" alt="Brasão com um texugo em um fundo amarelo">
+                    </button>
+                </a>
+            </div>
+            <a href="./html/main-page.html">
+                <span id="none" onclick="setHouse(this.id)">Skip</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,134 @@
+header{
+    background-color: var(--dark-gray);
+    display: flex;
+    padding: 8px 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .logo img{
+    width: 4.4rem;
+}
+
+header .right-container{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+header .right-container .header-options{
+    display: flex;  
+    gap: 35px;
+}
+
+header .right-container .header-options a{
+    position: relative;
+}
+
+header .right-container .header-options a span{
+    color: var(--white);
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+}
+
+header .right-container .header-options a:not(:last-child)::after{
+    content: '';    
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: var(--white);
+    transform: rotate(45deg);
+    position: absolute;
+    right: -20px;
+    bottom: 43%;
+    cursor: auto;
+}
+
+header .right-container .coat-of-arms img{
+    height: 60px;
+}
+
+.menu, .hamburger{
+    display: none;
+}
+
+@media (max-width: 992px){
+
+    header .right-container .header-options, .logo{
+        display: none;
+    }
+
+    header {
+        padding: 8px 50px;
+        width: 100vw;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+        z-index: 100;
+        border: none;
+        background-color: unset;
+        cursor: pointer;
+    }
+    
+    .hamburger img{
+        height: 10%;
+    }
+
+    .hamburger img[alt*='X']{
+        margin-top: 20px;
+        margin-left: 12px;
+        height: 2.8rem;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--dark-gray);
+        color: var(--main-color);
+        list-style: none;
+        padding-top: 4rem;
+        z-index: 5;
+    }
+
+    .menu a{
+        text-decoration: none;
+        font-size: 2rem;
+        color: var(--pearl);
+        font-family: var(--text-font);
+        text-shadow: 3px 3px var(--main-color);
+        font-weight: 700;
+    }
+
+    .closeIcon {
+        display: none;
+     }    
+
+    .showMenu {
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header{
+        padding: 8px 25px;
+    }
+
+}

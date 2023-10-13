@@ -1,0 +1,69 @@
+:root{
+    --title-font: 'Bluu-next';
+    --text-font: 'Mason';
+    --dark-gray: #2D2D2D;
+    --gray: #474044;
+    --light-gray: #5D5D5D;
+    --pearl: #F2EFE9;
+    --white: #FFFFFF;
+    --gray-opacity: rgba(89,89,89,0.45);
+    --gryffindor-gradient: rgba(70,0,0,1) 0%, rgba(174,0,1,1) 100%;
+    --slytherin-gradient: rgba(5,32,28,1) 0%, rgba(8,108,92,1) 100%;
+    --ravenclaw-gradient: rgba(7,12,32,1) 0%, rgba(34,47,91,1) 100%;
+    --hufflepuff-gradient: rgba(252,181,66,1) 0%, rgba(240,199,94,1) 100%;
+    --gryffindor-main-color: rgba(174,0,1,1);
+    --slytherin-main-color: rgba(41,97,60,1);
+    --ravenclaw-main-color: rgba(34,47,91,1);
+    --hufflepuff-main-color: rgba(240,199,94,1);
+    --gryffindor-second-color: #EEBA30;
+    --slytherin-second-color: #FAF8F8;
+    --ravenclaw-second-color: #BEBEBE;
+    --hufflepuff-second-color: #372E29;
+    --main-gradient: rgba(93,93,93,1) 0%, rgba(1,1,1,1) 100%;
+    --main-color: rgb(27,12,4);
+    --second-color: #DBDBDB;
+    --text-theme-color: #DBDBDB;
+    --dark-gradient: rgba(23,9,5,1) 0%, rgba(49,28,23,1) 100%;
+    --opacity-gradient: rgba(45,45,45,0) 0%, rgba(45,45,45,1) 100%;
+    --default-dark-gradient: rgba(23,9,5,1) 0%, rgba(49,28,23,1) 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+@font-face {
+    font-family: 'Bluu-next';
+    src: url('../fonts/bluu-next/BluuNext-Bold.otf') format('opentype'), url('../fonts/bluu-next/BluuNext-Bolditalic.otf') format('opentype'), url('../fonts/bluu-next/BluuNext-Titling.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mason';
+    src: url('../fonts/mason-sans/mason-sans-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

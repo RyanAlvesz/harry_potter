@@ -1,0 +1,119 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.box-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-gray);
+    border-radius: 36px;
+    gap: 24px;
+    padding: 70px 60px 30px 60px;
+    box-shadow: 30px 30px 20px rgba(0, 0, 0, 0.20);
+}
+
+.box-information h2{
+    font-family: var(--title-font);
+    color: white;
+    font-size: 2.5rem;  
+    font-weight: 700;
+    text-shadow: 10px 10px 10px black;
+}
+
+.box-information .buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+.buttons a{
+    width: 10.5rem  ;
+    height: 10.5rem;
+    border-radius: 12px;
+    transition: 1s;
+}
+
+a button{
+    width: 100%;
+    height: 100%;
+}
+
+a button img{
+    width: auto;
+    height: 90%;
+}
+
+.buttons a:hover{
+    transform: scale(1.05);
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons a:nth-child(1){
+    background: rgb(116,0,1);
+    background: linear-gradient(180deg, var(--gryffindor-gradient));
+}
+
+.buttons a:nth-child(2){
+    background: rgb(26,71,42);
+    background: linear-gradient(180deg, var(--slytherin-gradient));
+}
+
+.buttons a:nth-child(3){
+    background: rgb(14,26,64);
+    background: linear-gradient(180deg, var(--ravenclaw-gradient));
+}
+
+.buttons a:nth-child(4){
+    background: rgb(236,185,57);
+    background: linear-gradient(180deg, var(--hufflepuff-gradient));
+}
+
+.box-information a span{
+    font-family: var(--text-font);
+    font-size: 1.4rem;
+    color: var(--light-gray);
+    position: relative;
+}
+
+
+@media (max-width: 600px){
+    .box-information{
+        padding: 32px 6px 24px 6px;
+        width: 90%;
+        gap: 24px;
+        border-radius: 32px;
+        justify-content: space-around;
+    }
+    
+    .box-information h2{
+        font-size: 1.8rem;
+    }
+    
+    .buttons a{
+        width: 35vw;
+        height: 35vw;
+        border-radius: 12px;
+        transition: 1s;
+        flex: 1;
+    }
+    
+    .box-information .buttons{
+        gap: 12px;
+    }
+    
+    .box-information a{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
