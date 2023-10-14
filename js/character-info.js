@@ -52,18 +52,10 @@ const createCharacterCard = (character) => {
 
     if(character.image != ''){
         const imgContainer = document.createElement('div')
-        const img = document.createElement('img')
         imgContainer.classList.add('character-img')
         imgContainer.classList.add(`${characterHouse}-main-border`)
-        img.src = character.image
-        img.alt = character.name
+        imgContainer.style.backgroundImage = `url(${character.image})`
         characterContainer.appendChild(imgContainer)
-        imgContainer.appendChild(img)
-
-        if(character.name == "Dolores Umbridge"){
-            img.classList.add('umbridge')
-        }
-
     }
     
     if(character.house != ''){

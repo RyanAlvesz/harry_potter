@@ -55,6 +55,7 @@
         justify-content: center;
         gap: 15px;
         width: 95%;
+        margin-bottom: 24px;
     }
     
     .title-input h2{

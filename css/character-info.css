@@ -35,15 +35,9 @@ main{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-
-.character .character-img img{
-    width: 100%;
-    padding-top: 35px;
-}
-
-.character .character-img .umbridge{
-    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .character h2{
