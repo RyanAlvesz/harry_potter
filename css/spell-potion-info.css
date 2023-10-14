@@ -46,7 +46,7 @@ main{
 @media (max-width: 992px) {
     
     .box-info{
-        width: 60%;
+        max-width: 60%;
     }
 
 }
@@ -54,7 +54,7 @@ main{
 @media (max-width: 600px) {
 
     .box-info{
-        width: 90%;
+        max-width: 90%;
         padding: 24px;
         gap: 12px;
     }
